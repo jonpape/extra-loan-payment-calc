@@ -44,7 +44,8 @@ title_html = "<h1>Compare loan cost, interest & duration by making extra payment
 
 st.markdown(title_html, unsafe_allow_html=True)
 
-page_text = "<p>It has always amazed me how paying a little more each month " +\
+page_text = "<p><a href='https://jonpape.com/#projects'>View other projects</a></p>" +\
+            "<p>It has always amazed me how paying a little more each month " +\
             "can have a significant impact in the length of your loan.<p>" +\
             "<p>This calculator was created to show how, if you pay a little" +\
             " extra each month, you can significantly lower your total " +\
@@ -110,27 +111,27 @@ chart_data = df_transposed
 
 st.area_chart(chart_data)
 
-under_chart_html = '<p>Original loan term is ' + str(loan_term) + ' months.</p><block><ul>' + \
+under_chart_html = '<p>Original loan term is <u>' + str(loan_term) + ' months</u>.</p><block><ul>' + \
                    '<li>Total cost: $' + str(int(loan_amount + total_interest_payments[0])) + \
                    '</li><li>Total interest: $' + str(int(total_interest_payments[0])) + '</li>' + \
                    '<li>Monthly payment: $' + str(int(monthly_payment)) + '</li></ul></block>'
 
-under_chart_html = under_chart_html + '<p>Option 1 loan term is ' + str(len(option_1)) + \
-                   ' months.</p><block><ul>' + \
+under_chart_html = under_chart_html + '<p>Option 1 loan term is <u>' + str(len(option_1)) + \
+                   ' months</u>.</p><block><ul>' + \
                    '<li>Total cost: $' + str(int(loan_amount + total_interest_payments[1])) + \
                    '</li><li>Total interest: $' + str(int(total_interest_payments[1])) + \
                    '</li><li>Monthly payment: $' + str(int(monthly_payment + option1_payment)) + \
                    '</li></ul></block>'
 
-under_chart_html = under_chart_html + '<p>Option 2 loan term is ' + str(len(option_2)) + \
-                   ' months.</p><block><ul>' + \
+under_chart_html = under_chart_html + '<p>Option 2 loan term is <u>' + str(len(option_2)) + \
+                   ' months</u>.</p><block><ul>' + \
                    '<li>Total cost: $' + str(int(loan_amount + total_interest_payments[2])) + \
                    '</li><li>Total interest: $' + str(int(total_interest_payments[2])) + \
                    '</li><li>Monthly payment: $' + str(int(monthly_payment + option2_payment)) + \
                    '</li></ul></block>'
 
-under_chart_html = under_chart_html + '<p>Option 3 loan term is ' + str(len(option_3)) + \
-                   ' months.</p><block><ul>' + \
+under_chart_html = under_chart_html + '<p>Option 3 loan term is <u>' + str(len(option_3)) + \
+                   ' months</u>.</p><block><ul>' + \
                    '<li>Total cost: $' + str(int(loan_amount + total_interest_payments[3])) + \
                    '</li><li>Total interest: $' + str(int(total_interest_payments[3])) + \
                    '</li><li>Monthly payment: $' + str(int(monthly_payment + option3_payment)) + \
